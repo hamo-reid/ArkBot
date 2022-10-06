@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="promotion">
+        <div class="half-body">
+            <img src="{{half_body_url}}" alt="半身像">
+        </div>
+        <div class="info">
+            <h2>{{operater}}</h2>
+            <p>{{subProfession}}</p>
+            <div class="subProfession" class="div">
+                <img src="{{subProfession_url}}" alt="子职业">
+            </div>
+        </div>
+        <div class="costs">
+            <table>
+                <tr>
+                    <td colspan="2">
+                        精英一
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="promotion-img" src="https://prts.wiki/images/6/64/%E7%B2%BE%E8%8B%B1_1_%E5%8D%A1%E7%89%87.png" alt="精英一">
+                    </td>
+                    <td>
+                        <div class="items">
+                            {% for name, count in promotion_costs[0].items() %}
+                                <div class="item">
+                                    <img src="{{item_url_dict[name]}}" alt="{{item_url_dict[name]}}">
+                                    <span>
+                                        {{[("&nbsp;"*(3 - (count | string) | length)), (count | string)] | join}}
+                                    </span>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </td>
+                </tr>
+                {% if promotion_costs | length == 1 %}
+                <tr>
+                    <td colspan="2">
+                        干员没有精英二阶段
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                </tr>
+                {% else %}
+                <tr>
+                    <td colspan="2">
+                        精英二
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="promotion-img" src="https://prts.wiki/images/7/7c/%E7%B2%BE%E8%8B%B1_2_%E5%8D%A1%E7%89%87.png" alt="精英二">
+                    </td>
+                    <td>
+                        <div class="items">
+                            {% for name, count in promotion_costs[1].items() %}
+                                <div class="item">
+                                    <img src="{{item_url_dict[name]}}" alt="{{item_url_dict[name]}}">
+                                    <span>
+                                        {{[("&nbsp;"*(3 - (count | string) | length)), (count | string)] | join}}
+                                    </span>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </td>
+                </tr>
+                {% endif %}
+            </table>
+        </div>
+    </div>
+</body>
+</html>

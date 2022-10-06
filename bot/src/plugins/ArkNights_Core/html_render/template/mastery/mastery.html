@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./css.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="mastery">
+            <div class="stand">
+                <img src="{{stand_0_url}}" alt="n1">
+            </div>
+            <table class="table">
+                <tr>
+                    <td colspan="6">精英0解锁</td>
+                </tr>
+                <tr>
+                    {% for i in range(3)%}
+                    <td>{{i+1}}→{{i+2}}</td>
+                    <td>
+                        <div class="items">
+                            {% for item, count in lvlup_data[i].items() %}
+                            <div class="item">
+                                <img src="{{item_url_dict[item]}}" alt="{{item}}">
+                                <span>
+                                    {{count}}
+                                </span>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td colspan="6">精英1解锁</td>
+                </tr>
+                <tr>
+                    {% for i in range(3,6)%}
+                    <td>{{i+1}}→{{i+2}}</td>
+                    <td>
+                        <div class="items">
+                            {% for item, count in lvlup_data[i].items() %}
+                            <div class="item">
+                                <img src="{{item_url_dict[item]}}" alt="{{item}}">
+                                <span>
+                                    {{count}}
+                                </span>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </td>
+                    {% endfor %}
+                </tr>
+                <tr>
+                    <td colspan="6">精英2解锁</td>
+                </tr>
+                <tr>
+                    {% for mastery_skill in mastery_skill_data %}
+                    <td>
+                        <div class="skill">
+                            <img src="{{skill_url_dict[mastery_skill['name']]}}" alt="">
+                        </div>
+                    </td>
+                    <td>
+                        <p>{{mastery_skill['name'] or ''}}</p>
+                    </td>
+                    {% endfor %}
+                </tr>
+                {% for i in range(3) %}
+                <tr>
+                    {% for mi in range(3)%}
+                        {% if mastery_skill_data[mi] is none %}
+                        <td></td>
+                        <td></td>
+                        {% else %}
+                        <td>
+                            <div>
+                                <img class="mastery_icon" src="{{mastery_icons[i]}}" alt="">
+                                <p>专精{{i+1}}</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="items">
+                                {% for item, count in mastery_skill_data[mi]['costs'][i].items() %}
+                                <div class="item">
+                                    <img src="{{item_url_dict[item]}}" alt="{{item}}">
+                                    <span>
+                                        {{count}}
+                                    </span>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </td>
+                        {% endif %}
+                    {% endfor %}
+                </tr>
+                {% endfor %}
+                </tr>
+            </table>
+            <div class="stand">
+                <img src="{{stand_2_url}}" alt="n2">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

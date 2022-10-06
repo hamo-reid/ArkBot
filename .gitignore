@@ -102,7 +102,6 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
 .venv
 env/
 venv/
@@ -127,3 +126,16 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# ArkBot ignorance
+.VSCodeCounter
+
+/bot/arknights
+/bot/.env.usedev
+/bot/test.py
+
+/gocq/data
+/gocq/logs
+/gocq/config.yml
+/gocq/device.json
+/gocq/session.token

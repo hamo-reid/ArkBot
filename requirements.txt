@@ -1,0 +1,10 @@
+fake_useragent==0.1.11
+fuzzywuzzy==0.18.0
+httpx==0.21.3
+Jinja2==3.1.2
+lxml==4.6.1
+nonebot==1.9.1
+Pillow==9.2.0
+playwright==1.25.2
+pydantic==1.9.0
+ujson==4.0.1

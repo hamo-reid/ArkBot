@@ -1,0 +1,125 @@
+*  {
+    padding: 0;
+    margin: 0;
+    font-family: "幼圆";
+}
+
+.promotion {
+    /* border: solid 5px blue; */
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./assets/bg_img_1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.promotion div{
+    margin: 0 14px;
+}
+
+.half-body img {
+    height: 440px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: -1px 1px 0 white, 1px 1px 0 white, 1px -1px 0 white,
+          -1px -1px 0 white;
+    font-weight: 600;
+}
+
+.info h2 {
+    margin-bottom: 80px;
+    font-size: 3em;
+}
+
+.info p {
+    font-size: 36px;
+}
+
+.info .subProfession {
+    width: 110px;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: auto;
+    background-color: black;
+    border: solid 1px white;
+}
+
+.subProfession img {
+    width: 70%;
+    height: 70%;
+    object-fit: contain;
+}
+
+table {
+    text-align: center;
+    background-color: rgba(248, 249, 250, 0.75);
+    border-spacing: 0;
+    border-top: solid 3px;
+    border-left: solid 3px;
+}
+
+table td {
+    border-bottom: 3px solid;
+    border-right: 3px solid;
+}
+
+table tr:nth-child(odd) {
+    height: 60px;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+table tr:nth-child(even) td:nth-child(2){
+    height: 160px;
+    width: 620px;
+}
+
+table tr:nth-child(even) td:nth-child(1) {
+    width: 160px;
+}
+
+.promotion-img {
+    width: 70%;
+}
+
+.items {
+    font-size: 0;
+}
+
+.items .item:last-child {
+    margin: 0 12px;
+}
+
+.item {
+    display: inline-block;
+    position: relative;
+    margin: 0 0 0 12px;
+}
+
+.item img {
+    width: 120px;
+    height: 120px;
+    /* border: solid 1px red; */
+}
+
+.item span {
+    position: absolute;
+    bottom: 10px;
+    left: 48px;
+    font-size: 40px;
+    font-weight: bold;
+    /* border: solid 3px blue; */
+    text-shadow: -1px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF, -1px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF, -1px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF, -1px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF, -1px -1px 0 #FFFFFF, 1px -1px 0 #FFFFFF, -1px 1px 0 #FFFFFF, 1px 1px 0 #FFFFFF, -2px -2px 4px #FFFFFF, 2px -2px 4px #FFFFFF, -2px 2px 4px #FFFFFF, 2px 2px 4px #FFFFFF;
+}
